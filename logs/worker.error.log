@@ -1,0 +1,1020 @@
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/threading.py", line 932, in _bootstrap_inner
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/threading.py", line 932, in _bootstrap_inner
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/threading.py", line 932, in _bootstrap_inner
+    self.run()
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/client.py", line 3718, in run
+    self.run()
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/client.py", line 3718, in run
+    pubsub.get_message(ignore_subscribe_messages=True,
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/client.py", line 3617, in get_message
+    response = self.parse_response(block=False, timeout=timeout)
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/client.py", line 3503, in parse_response
+    if not block and not conn.can_read(timeout=timeout):
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/connection.py", line 734, in can_read
+    pubsub.get_message(ignore_subscribe_messages=True,
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/client.py", line 3617, in get_message
+    response = self.parse_response(block=False, timeout=timeout)
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/client.py", line 3503, in parse_response
+    if not block and not conn.can_read(timeout=timeout):
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/connection.py", line 734, in can_read
+    return self._parser.can_read(timeout)
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/connection.py", line 321, in can_read
+    return self._buffer and self._buffer.can_read(timeout)
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/connection.py", line 230, in can_read
+    self._read_from_socket(timeout=timeout,
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/connection.py", line 201, in _read_from_socket
+    raise ConnectionError(SERVER_CLOSED_CONNECTION_ERROR)
+redis.exceptions.ConnectionError: Connection closed by server.
+    self.run()
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/client.py", line 3718, in run
+    pubsub.get_message(ignore_subscribe_messages=True,
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/client.py", line 3617, in get_message
+    response = self.parse_response(block=False, timeout=timeout)
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/client.py", line 3503, in parse_response
+    if not block and not conn.can_read(timeout=timeout):
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/connection.py", line 734, in can_read
+    return self._parser.can_read(timeout)
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/connection.py", line 321, in can_read
+    return self._buffer and self._buffer.can_read(timeout)
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/connection.py", line 230, in can_read
+    self._read_from_socket(timeout=timeout,
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/connection.py", line 201, in _read_from_socket
+    raise ConnectionError(SERVER_CLOSED_CONNECTION_ERROR)
+redis.exceptions.ConnectionError: Connection closed by server.
+    return self._parser.can_read(timeout)
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/connection.py", line 321, in can_read
+    return self._buffer and self._buffer.can_read(timeout)
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/connection.py", line 230, in can_read
+    self._read_from_socket(timeout=timeout,
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/connection.py", line 201, in _read_from_socket
+    raise ConnectionError(SERVER_CLOSED_CONNECTION_ERROR)
+redis.exceptions.ConnectionError: Connection closed by server.
+09:47:55 Traceback (most recent call last):
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/rq/worker.py", line 1013, in perform_job
+    rv = job.perform()
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/rq/job.py", line 709, in perform
+    self._result = self._execute()
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/rq/job.py", line 732, in _execute
+    result = self.func(*self.args, **self.kwargs)
+  File "/opt/bench/erpnext/apps/frappe/frappe/utils/background_jobs.py", line 106, in execute_job
+    method(**kwargs)
+  File "/opt/bench/erpnext/apps/frappe/frappe/core/doctype/user/user.py", line 1000, in create_contact
+    contact.insert(ignore_permissions=True, ignore_links=ignore_links, ignore_mandatory=ignore_mandatory)
+  File "/opt/bench/erpnext/apps/frappe/frappe/model/document.py", line 229, in insert
+    self._validate_links()
+  File "/opt/bench/erpnext/apps/frappe/frappe/model/document.py", line 834, in _validate_links
+    frappe.throw(_("Could not find {0}").format(msg),
+  File "/opt/bench/erpnext/apps/frappe/frappe/__init__.py", line 443, in throw
+    msgprint(msg, raise_exception=exc, title=title, indicator='red', is_minimizable=is_minimizable, wide=wide, as_list=as_list)
+  File "/opt/bench/erpnext/apps/frappe/frappe/__init__.py", line 422, in msgprint
+    _raise_exception()
+  File "/opt/bench/erpnext/apps/frappe/frappe/__init__.py", line 376, in _raise_exception
+    raise raise_exception(msg)
+frappe.exceptions.LinkValidationError: Could not find User Id: phuysgu8@gmail.com
+
+Traceback (most recent call last):
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/connection.py", line 559, in connect
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/threading.py", line 932, in _bootstrap_inner
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/threading.py", line 932, in _bootstrap_inner
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/threading.py", line 932, in _bootstrap_inner
+    self.run()
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/client.py", line 3718, in run
+    sock = self._connect()
+    pubsub.get_message(ignore_subscribe_messages=True,  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/connection.py", line 615, in _connect
+    self.run()
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/client.py", line 3718, in run
+    pubsub.get_message(ignore_subscribe_messages=True,
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/client.py", line 3617, in get_message
+    response = self.parse_response(block=False, timeout=timeout)
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/client.py", line 3503, in parse_response
+    if not block and not conn.can_read(timeout=timeout):
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/connection.py", line 734, in can_read
+    return self._parser.can_read(timeout)
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/connection.py", line 321, in can_read
+    return self._buffer and self._buffer.can_read(timeout)
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/connection.py", line 230, in can_read
+    self._read_from_socket(timeout=timeout,
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/connection.py", line 201, in _read_from_socket
+    raise ConnectionError(SERVER_CLOSED_CONNECTION_ERROR)
+
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/client.py", line 3617, in get_message
+redis.exceptions    self.run()
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/client.py", line 3718, in run
+    pubsub.get_message(ignore_subscribe_messages=True,
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/client.py", line 3617, in get_message
+    .    raise err
+response = self.parse_response(block=False, timeout=timeout)  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/connection.py", line 603, in _connect
+ConnectionError
+: Connection closed by server.
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/client.py", line 3503, in parse_response
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/runpy.py", line 194, in _run_module_as_main
+            response = self.parse_response(block=False, timeout=timeout)return _run_code(code, main_globals, None,if not block and not conn.can_read(timeout=timeout):
+
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/client.py", line 3503, in parse_response
+
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/connection.py", line 734, in can_read
+      File "/usr/lib/python3.8/runpy.py", line 87, in _run_code
+return self._parser.can_read(timeout)
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/connection.py", line 321, in can_read
+    return self._buffer and self._buffer.can_read(timeout)
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/connection.py", line 230, in can_read
+    self._read_from_socket(timeout=timeout,
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/connection.py", line 201, in _read_from_socket
+    exec(code, run_globals)
+  File "/opt/bench/erpnext/apps/frappe/frappe/utils/bench_helper.py", line 104, in <module>
+    raise ConnectionError(SERVER_CLOSED_CONNECTION_ERROR)    main()
+  File "/opt/bench/erpnext/apps/frappe/frappe/utils/bench_helper.py", line 18, in main
+    click.Group(commands=commands)(prog_name='bench')
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/click/core.py", line 829, in __call__
+
+    if not block and not conn.can_read(timeout=timeout):
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/connection.py", line 734, in can_read
+    redis.exceptionsreturn self._parser.can_read(timeout)    return self.main(*args, **kwargs)
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/click/core.py", line 782, in main
+
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/connection.py", line 321, in can_read
+    return self._buffer and self._buffer.can_read(timeout).    rv = self.invoke(ctx)
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/click/core.py", line 1259, in invoke
+    
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/connection.py", line 230, in can_read
+    ConnectionErrorreturn _process_result(sub_ctx.command.invoke(sub_ctx))
+self._read_from_socket(timeout=timeout,
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/connection.py", line 201, in _read_from_socket
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/click/core.py", line 1259, in invoke
+    : Connection closed by server.
+raise ConnectionError(SERVER_CLOSED_CONNECTION_ERROR)
+redis.exceptions.ConnectionError: Connection closed by server.
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/click/core.py", line 1066, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/click/core.py", line 610, in invoke
+    return callback(*args, **kwargs)
+  File "/opt/bench/erpnext/apps/frappe/frappe/commands/scheduler.py", line 181, in start_worker
+    start_worker(queue, quiet = quiet, rq_username=rq_username, rq_password=rq_password)
+  File "/opt/bench/erpnext/apps/frappe/frappe/utils/background_jobs.py", line 158, in start_worker
+    Worker(queues, name=get_worker_name(queue_name)).work(logging_level = logging_level)
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/rq/worker.py", line 626, in work
+    Traceback (most recent call last):
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/connection.py", line 559, in connect
+self.register_death()
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/rq/worker.py", line 326, in register_death
+    sock = self._connect()
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/connection.py", line 615, in _connect
+    raise err
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/connection.py", line 603, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/runpy.py", line 194, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib/python3.8/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/opt/bench/erpnext/apps/frappe/frappe/utils/bench_helper.py", line 104, in <module>
+    main()
+  File "/opt/bench/erpnext/apps/frappe/frappe/utils/bench_helper.py", line 18, in main
+    click.Group(commands=commands)(prog_name='bench')
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/click/core.py", line 829, in __call__
+    return self.main(*args, **kwargs)
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/click/core.py", line 782, in main
+    rv = self.invoke(ctx)
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/click/core.py", line 1259, in invoke
+    p.execute()
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/client.py", line 4012, in execute
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/click/core.py", line 1259, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/click/core.py", line 1066, in invoke
+    conn = self.connection_pool.get_connection('MULTI',
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/connection.py", line 1192, in get_connection
+        return ctx.invoke(self.callback, **ctx.params)
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/click/core.py", line 610, in invoke
+connection.connect()
+      File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/connection.py", line 563, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to localhost:11000. Connection refused.
+return callback(*args, **kwargs)
+  File "/opt/bench/erpnext/apps/frappe/frappe/commands/scheduler.py", line 181, in start_worker
+    start_worker(queue, quiet = quiet, rq_username=rq_username, rq_password=rq_password)
+  File "/opt/bench/erpnext/apps/frappe/frappe/utils/background_jobs.py", line 158, in start_worker
+    Worker(queues, name=get_worker_name(queue_name)).work(logging_level = logging_level)
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/rq/worker.py", line 626, in work
+    self.register_death()
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/rq/worker.py", line 326, in register_death
+    p.execute()
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/client.py", line 4012, in execute
+Traceback (most recent call last):
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/connection.py", line 559, in connect
+    sock = self._connect()
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/connection.py", line 615, in _connect
+    raise err
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/connection.py", line 603, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/runpy.py", line 194, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib/python3.8/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/opt/bench/erpnext/apps/frappe/frappe/utils/bench_helper.py", line 104, in <module>
+    main()
+  File "/opt/bench/erpnext/apps/frappe/frappe/utils/bench_helper.py", line 18, in main
+    click.Group(commands=commands)(prog_name='bench')
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/click/core.py", line 829, in __call__
+    return self.main(*args, **kwargs)
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/click/core.py", line 782, in main
+    rv = self.invoke(ctx)
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/click/core.py", line 1259, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/click/core.py", line 1259, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/click/core.py", line 1066, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/click/core.py", line 610, in invoke
+    return callback(*args, **kwargs)
+  File "/opt/bench/erpnext/apps/frappe/frappe/commands/scheduler.py", line 181, in start_worker
+    start_worker(queue, quiet = quiet, rq_username=rq_username, rq_password=rq_password)
+  File "/opt/bench/erpnext/apps/frappe/frappe/utils/background_jobs.py", line 158, in start_worker
+    Worker(queues, name=get_worker_name(queue_name)).work(logging_level = logging_level)
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/rq/worker.py", line 626, in work
+        self.register_death()
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/rq/worker.py", line 326, in register_death
+    conn = self.connection_pool.get_connection('MULTI',
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/connection.py", line 1192, in get_connection
+p.execute()
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/client.py", line 4012, in execute
+    connection.connect()
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/connection.py", line 563, in connect
+        raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to localhost:11000. Connection refused.
+conn = self.connection_pool.get_connection('MULTI',
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/connection.py", line 1192, in get_connection
+    connection.connect()
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/connection.py", line 563, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to localhost:11000. Connection refused.
+Traceback (most recent call last):
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/connection.py", line 559, in connect
+    sock = self._connect()Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/threading.py", line 932, in _bootstrap_inner
+
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/connection.py", line 615, in _connect
+    Exception in thread Exception in thread raise err    self.run()
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/client.py", line 3718, in run
+
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/connection.py", line 603, in _connect
+    Thread-1:
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/threading.py", line 932, in _bootstrap_inner
+sock.connect(socket_address)
+ConnectionRefusedError: Thread-1:
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/threading.py", line 932, in _bootstrap_inner
+[Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/runpy.py", line 194, in _run_module_as_main
+        return _run_code(code, main_globals, None,pubsub.get_message(ignore_subscribe_messages=True,
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/client.py", line 3617, in get_message
+
+  File "/usr/lib/python3.8/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/opt/bench/erpnext/apps/frappe/frappe/utils/bench_helper.py", line 104, in <module>
+    main()
+  File "/opt/bench/erpnext/apps/frappe/frappe/utils/bench_helper.py", line 18, in main
+    click.Group(commands=commands)(prog_name='bench')
+      File "/opt/bench/erpnext/env/lib/python3.8/site-packages/click/core.py", line 829, in __call__
+response = self.parse_response(block=False, timeout=timeout)
+    self.run()
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/client.py", line 3718, in run
+    pubsub.get_message(ignore_subscribe_messages=True,
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/client.py", line 3617, in get_message
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/client.py", line 3503, in parse_response
+    self.run()
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/client.py", line 3718, in run
+    pubsub.get_message(ignore_subscribe_messages=True,
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/client.py", line 3617, in get_message
+    response = self.parse_response(block=False, timeout=timeout)
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/client.py", line 3503, in parse_response
+    if not block and not conn.can_read(timeout=timeout):
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/connection.py", line 734, in can_read
+    response = self.parse_response(block=False, timeout=timeout)
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/client.py", line 3503, in parse_response
+        if not block and not conn.can_read(timeout=timeout):
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/connection.py", line 734, in can_read
+return self.main(*args, **kwargs)
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/click/core.py", line 782, in main
+        return self._parser.can_read(timeout)rv = self.invoke(ctx)
+
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/connection.py", line 321, in can_read
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/click/core.py", line 1259, in invoke
+    return self._buffer and self._buffer.can_read(timeout)
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/connection.py", line 230, in can_read
+    return self._parser.can_read(timeout)
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/connection.py", line 321, in can_read
+    return self._buffer and self._buffer.can_read(timeout)
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/connection.py", line 230, in can_read
+    self._read_from_socket(timeout=timeout,
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/connection.py", line 201, in _read_from_socket
+    raise ConnectionError(SERVER_CLOSED_CONNECTION_ERROR)
+        self._read_from_socket(timeout=timeout,
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/connection.py", line 201, in _read_from_socket
+redis.exceptions.ConnectionError: Connection closed by server.
+    raise ConnectionError(SERVER_CLOSED_CONNECTION_ERROR)
+return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/click/core.py", line 1259, in invoke
+redis.exceptions        if not block and not conn.can_read(timeout=timeout):return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/click/core.py", line 1066, in invoke
+.
+    return ctx.invoke(self.callback, **ctx.params)  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/connection.py", line 734, in can_read
+    
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/click/core.py", line 610, in invoke
+ConnectionErrorreturn self._parser.can_read(timeout)    return callback(*args, **kwargs)
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/connection.py", line 321, in can_read
+:     return self._buffer and self._buffer.can_read(timeout)
+  File "/opt/bench/erpnext/apps/frappe/frappe/commands/scheduler.py", line 181, in start_worker
+
+Connection closed by server.    start_worker(queue, quiet = quiet, rq_username=rq_username, rq_password=rq_password)  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/connection.py", line 230, in can_read
+    self._read_from_socket(timeout=timeout,
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/connection.py", line 201, in _read_from_socket
+    raise ConnectionError(SERVER_CLOSED_CONNECTION_ERROR)
+redis.exceptions.ConnectionError: Connection closed by server.
+
+
+  File "/opt/bench/erpnext/apps/frappe/frappe/utils/background_jobs.py", line 158, in start_worker
+    Worker(queues, name=get_worker_name(queue_name)).work(logging_level = logging_level)
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/rq/worker.py", line 626, in work
+    self.register_death()
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/rq/worker.py", line 326, in register_death
+    p.execute()
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/client.py", line 4012, in execute
+    conn = self.connection_pool.get_connection('MULTI',
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/connection.py", line 1192, in get_connection
+    connection.connect()
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/connection.py", line 563, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to localhost:11000. Connection refused.
+Traceback (most recent call last):
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/connection.py", line 559, in connect
+Traceback (most recent call last):
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/connection.py", line 559, in connect
+    sock = self._connect()
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/connection.py", line 615, in _connect
+    sock = self._connect()
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/connection.py", line 615, in _connect
+    raise err
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/connection.py", line 603, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/runpy.py", line 194, in _run_module_as_main
+    raise err
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/connection.py", line 603, in _connect
+        return _run_code(code, main_globals, None,
+  File "/usr/lib/python3.8/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+sock.connect(socket_address)
+  File "/opt/bench/erpnext/apps/frappe/frappe/utils/bench_helper.py", line 104, in <module>
+    main()
+  File "/opt/bench/erpnext/apps/frappe/frappe/utils/bench_helper.py", line 18, in main
+    click.Group(commands=commands)(prog_name='bench')
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/runpy.py", line 194, in _run_module_as_main
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/click/core.py", line 829, in __call__
+    return self.main(*args, **kwargs)
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/click/core.py", line 782, in main
+    rv = self.invoke(ctx)
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/click/core.py", line 1259, in invoke
+        return _run_code(code, main_globals, None,return _process_result(sub_ctx.command.invoke(sub_ctx))
+
+  File "/usr/lib/python3.8/runpy.py", line 87, in _run_code
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/click/core.py", line 1259, in invoke
+        exec(code, run_globals)
+return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/click/core.py", line 1066, in invoke
+      File "/opt/bench/erpnext/apps/frappe/frappe/utils/bench_helper.py", line 104, in <module>
+    main()
+  File "/opt/bench/erpnext/apps/frappe/frappe/utils/bench_helper.py", line 18, in main
+    click.Group(commands=commands)(prog_name='bench')
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/click/core.py", line 829, in __call__
+return ctx.invoke(self.callback, **ctx.params)
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/click/core.py", line 610, in invoke
+        return self.main(*args, **kwargs)
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/click/core.py", line 782, in main
+    return callback(*args, **kwargs)
+rv = self.invoke(ctx)
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/click/core.py", line 1259, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/click/core.py", line 1259, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/click/core.py", line 1066, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/click/core.py", line 610, in invoke
+    return callback(*args, **kwargs)
+  File "/opt/bench/erpnext/apps/frappe/frappe/commands/scheduler.py", line 181, in start_worker
+    start_worker(queue, quiet = quiet, rq_username=rq_username, rq_password=rq_password)
+  File "/opt/bench/erpnext/apps/frappe/frappe/utils/background_jobs.py", line 158, in start_worker
+      File "/opt/bench/erpnext/apps/frappe/frappe/commands/scheduler.py", line 181, in start_worker
+    start_worker(queue, quiet = quiet, rq_username=rq_username, rq_password=rq_password)
+  File "/opt/bench/erpnext/apps/frappe/frappe/utils/background_jobs.py", line 158, in start_worker
+    Worker(queues, name=get_worker_name(queue_name)).work(logging_level = logging_level)
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/rq/worker.py", line 626, in work
+    Worker(queues, name=get_worker_name(queue_name)).work(logging_level = logging_level)
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/rq/worker.py", line 626, in work
+    self.register_death()
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/rq/worker.py", line 326, in register_death
+    self.register_death()p.execute()
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/client.py", line 4012, in execute
+    conn = self.connection_pool.get_connection('MULTI',
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/connection.py", line 1192, in get_connection
+    connection.connect()
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/connection.py", line 563, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to localhost:11000. Connection refused.
+
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/rq/worker.py", line 326, in register_death
+    p.execute()
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/client.py", line 4012, in execute
+    conn = self.connection_pool.get_connection('MULTI',
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/connection.py", line 1192, in get_connection
+    connection.connect()
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/connection.py", line 563, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to localhost:11000. Connection refused.
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/threading.py", line 932, in _bootstrap_inner
+Traceback (most recent call last):
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/connection.py", line 198, in _read_from_socket
+    Exception in thread self.run()
+Exception in thread   File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/client.py", line 3718, in run
+Thread-1:
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/threading.py", line 932, in _bootstrap_inner
+    Thread-1:
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/threading.py", line 932, in _bootstrap_inner
+data = recv(self._sock, socket_read_size)
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/_compat.py", line 72, in recv
+    return sock.recv(*args, **kwargs)
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/runpy.py", line 194, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib/python3.8/runpy.py", line 87, in _run_code
+    exec(code, run_globals)    self.run()
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/client.py", line 3718, in run
+    pubsub.get_message(ignore_subscribe_messages=True,
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/client.py", line 3617, in get_message
+        self.run()
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/client.py", line 3718, in run
+    pubsub.get_message(ignore_subscribe_messages=True,
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/client.py", line 3617, in get_message
+    response = self.parse_response(block=False, timeout=timeout)
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/client.py", line 3503, in parse_response
+    if not block and not conn.can_read(timeout=timeout):
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/connection.py", line 734, in can_read
+    return self._parser.can_read(timeout)
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/connection.py", line 321, in can_read
+    return self._buffer and self._buffer.can_read(timeout)
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/connection.py", line 230, in can_read
+    self._read_from_socket(timeout=timeout,
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/connection.py", line 201, in _read_from_socket
+    raise ConnectionError(SERVER_CLOSED_CONNECTION_ERROR)
+pubsub.get_message(ignore_subscribe_messages=True,
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/client.py", line 3617, in get_message
+    
+redis.exceptions  File "/opt/bench/erpnext/apps/frappe/frappe/utils/bench_helper.py", line 104, in <module>
+response = self.parse_response(block=False, timeout=timeout)    main()
+  File "/opt/bench/erpnext/apps/frappe/frappe/utils/bench_helper.py", line 18, in main
+    click.Group(commands=commands)(prog_name='bench')
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/click/core.py", line 829, in __call__
+
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/client.py", line 3503, in parse_response
+.    ConnectionError: Connection closed by server.
+response = self.parse_response(block=False, timeout=timeout)
+    return self.main(*args, **kwargs)
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/click/core.py", line 782, in main
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/client.py", line 3503, in parse_response
+        rv = self.invoke(ctx)
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/click/core.py", line 1259, in invoke
+if not block and not conn.can_read(timeout=timeout):
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/connection.py", line 734, in can_read
+    return self._parser.can_read(timeout)
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/connection.py", line 321, in can_read
+    return self._buffer and self._buffer.can_read(timeout)
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/connection.py", line 230, in can_read
+    self._read_from_socket(timeout=timeout,
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/connection.py", line 201, in _read_from_socket
+    raise ConnectionError(SERVER_CLOSED_CONNECTION_ERROR)
+    redis.exceptions.ConnectionError: Connection closed by server.
+    if not block and not conn.can_read(timeout=timeout):return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/click/core.py", line 1259, in invoke
+
+    return _process_result(sub_ctx.command.invoke(sub_ctx))  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/connection.py", line 734, in can_read
+    return self._parser.can_read(timeout)
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/connection.py", line 321, in can_read
+    return self._buffer and self._buffer.can_read(timeout)
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/connection.py", line 230, in can_read
+    
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/click/core.py", line 1066, in invoke
+self._read_from_socket(timeout=timeout,
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/connection.py", line 201, in _read_from_socket
+    raise ConnectionError(SERVER_CLOSED_CONNECTION_ERROR)
+redis.exceptions.ConnectionError: Connection closed by server.
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/click/core.py", line 610, in invoke
+    return callback(*args, **kwargs)
+  File "/opt/bench/erpnext/apps/frappe/frappe/commands/scheduler.py", line 181, in start_worker
+    start_worker(queue, quiet = quiet, rq_username=rq_username, rq_password=rq_password)
+  File "/opt/bench/erpnext/apps/frappe/frappe/utils/background_jobs.py", line 158, in start_worker
+    Worker(queues, name=get_worker_name(queue_name)).work(logging_level = logging_level)
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/rq/worker.py", line 626, in work
+    self.register_death()
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/rq/worker.py", line 326, in register_death
+    p.execute()
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/client.py", line 4019, in execute
+    return execute(conn, stack, raise_on_error)
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/client.py", line 3894, in _execute_transaction
+    self.parse_response(connection, '_')
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/client.py", line 3977, in parse_response
+    Traceback (most recent call last):
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/connection.py", line 559, in connect
+result = Redis.parse_response(
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/client.py", line 915, in parse_response
+    sock = self._connect()
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/connection.py", line 615, in _connect
+    raise err
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/connection.py", line 603, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/runpy.py", line 194, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib/python3.8/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/opt/bench/erpnext/apps/frappe/frappe/utils/bench_helper.py", line 104, in <module>
+    main()
+  File "/opt/bench/erpnext/apps/frappe/frappe/utils/bench_helper.py", line 18, in main
+    click.Group(commands=commands)(prog_name='bench')
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/click/core.py", line 829, in __call__
+    return self.main(*args, **kwargs)
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/click/core.py", line 782, in main
+    rv = self.invoke(ctx)
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/click/core.py", line 1259, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/click/core.py", line 1259, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/click/core.py", line 1066, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/click/core.py", line 610, in invoke
+        response = connection.read_response()
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/connection.py", line 739, in read_response
+return callback(*args, **kwargs)
+  File "/opt/bench/erpnext/apps/frappe/frappe/commands/scheduler.py", line 181, in start_worker
+        start_worker(queue, quiet = quiet, rq_username=rq_username, rq_password=rq_password)
+  File "/opt/bench/erpnext/apps/frappe/frappe/utils/background_jobs.py", line 158, in start_worker
+response = self._parser.read_response()
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/connection.py", line 324, in read_response
+    Worker(queues, name=get_worker_name(queue_name)).work(logging_level = logging_level)
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/rq/worker.py", line 626, in work
+        raw = self._buffer.readline()
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/connection.py", line 256, in readline
+self.register_death()
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/rq/worker.py", line 326, in register_death
+    p.execute()
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/client.py", line 4012, in execute
+    self._read_from_socket()
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/connection.py", line 222, in _read_from_socket
+Traceback (most recent call last):
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/connection.py", line 559, in connect
+        sock = self._connect()
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/connection.py", line 615, in _connect
+    raise err
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/connection.py", line 603, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/runpy.py", line 194, in _run_module_as_main
+raise ConnectionError("Error while reading from socket: %s" %
+    return _run_code(code, main_globals, None,
+  File "/usr/lib/python3.8/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+redis.exceptions.ConnectionError: Error while reading from socket: (104, 'Connection reset by peer')
+  File "/opt/bench/erpnext/apps/frappe/frappe/utils/bench_helper.py", line 104, in <module>
+    main()
+  File "/opt/bench/erpnext/apps/frappe/frappe/utils/bench_helper.py", line 18, in main
+    click.Group(commands=commands)(prog_name='bench')
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/click/core.py", line 829, in __call__
+    return self.main(*args, **kwargs)
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/click/core.py", line 782, in main
+    rv = self.invoke(ctx)
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/click/core.py", line 1259, in invoke
+        return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/click/core.py", line 1259, in invoke
+conn = self.connection_pool.get_connection('MULTI',
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/connection.py", line 1192, in get_connection
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/click/core.py", line 1066, in invoke
+    connection.connect()
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/connection.py", line 563, in connect
+        return ctx.invoke(self.callback, **ctx.params)
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/click/core.py", line 610, in invoke
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to localhost:11000. Connection refused.
+return callback(*args, **kwargs)
+  File "/opt/bench/erpnext/apps/frappe/frappe/commands/scheduler.py", line 181, in start_worker
+    start_worker(queue, quiet = quiet, rq_username=rq_username, rq_password=rq_password)
+  File "/opt/bench/erpnext/apps/frappe/frappe/utils/background_jobs.py", line 158, in start_worker
+    Worker(queues, name=get_worker_name(queue_name)).work(logging_level = logging_level)
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/rq/worker.py", line 626, in work
+    self.register_death()
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/rq/worker.py", line 326, in register_death
+    p.execute()
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/client.py", line 4012, in execute
+    conn = self.connection_pool.get_connection('MULTI',
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/connection.py", line 1192, in get_connection
+    connection.connect()
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/connection.py", line 563, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to localhost:11000. Connection refused.
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/threading.py", line 932, in _bootstrap_inner
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/threading.py", line 932, in _bootstrap_inner
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/threading.py", line 932, in _bootstrap_inner
+    self.run()
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/client.py", line 3718, in run
+    self.run()
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/client.py", line 3718, in run
+    self.run()
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/client.py", line 3718, in run
+    pubsub.get_message(ignore_subscribe_messages=True,
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/client.py", line 3617, in get_message
+    response = self.parse_response(block=False, timeout=timeout)
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/client.py", line 3503, in parse_response
+    if not block and not conn.can_read(timeout=timeout):
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/connection.py", line 734, in can_read
+    pubsub.get_message(ignore_subscribe_messages=True,
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/client.py", line 3617, in get_message
+    response = self.parse_response(block=False, timeout=timeout)
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/client.py", line 3503, in parse_response
+    if not block and not conn.can_read(timeout=timeout):
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/connection.py", line 734, in can_read
+    return self._parser.can_read(timeout)
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/connection.py", line 321, in can_read
+    return self._buffer and self._buffer.can_read(timeout)
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/connection.py", line 230, in can_read
+    self._read_from_socket(timeout=timeout,
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/connection.py", line 201, in _read_from_socket
+    raise ConnectionError(SERVER_CLOSED_CONNECTION_ERROR)
+redis.exceptions.ConnectionError: Connection closed by server.
+    return self._parser.can_read(timeout)
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/connection.py", line 321, in can_read
+    return self._buffer and self._buffer.can_read(timeout)
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/connection.py", line 230, in can_read
+    self._read_from_socket(timeout=timeout,
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/connection.py", line 201, in _read_from_socket
+    raise ConnectionError(SERVER_CLOSED_CONNECTION_ERROR)
+redis.exceptions.ConnectionError: Connection closed by server.
+    pubsub.get_message(ignore_subscribe_messages=True,
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/client.py", line 3617, in get_message
+    response = self.parse_response(block=False, timeout=timeout)
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/client.py", line 3503, in parse_response
+    if not block and not conn.can_read(timeout=timeout):
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/connection.py", line 734, in can_read
+    return self._parser.can_read(timeout)
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/connection.py", line 321, in can_read
+    return self._buffer and self._buffer.can_read(timeout)
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/connection.py", line 230, in can_read
+    self._read_from_socket(timeout=timeout,
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/connection.py", line 201, in _read_from_socket
+    raise ConnectionError(SERVER_CLOSED_CONNECTION_ERROR)
+redis.exceptions.ConnectionError: Connection closed by server.
+Traceback (most recent call last):
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/connection.py", line 559, in connect
+    sock = self._connect()
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/connection.py", line 615, in _connect
+    raise err
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/connection.py", line 603, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/runpy.py", line 194, in _run_module_as_main
+Traceback (most recent call last):
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/connection.py", line 559, in connect
+    sock = self._connect()
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/connection.py", line 615, in _connect
+    raise err
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/connection.py", line 603, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/runpy.py", line 194, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib/python3.8/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/opt/bench/erpnext/apps/frappe/frappe/utils/bench_helper.py", line 104, in <module>
+    main()
+  File "/opt/bench/erpnext/apps/frappe/frappe/utils/bench_helper.py", line 18, in main
+    click.Group(commands=commands)(prog_name='bench')
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/click/core.py", line 829, in __call__
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/threading.py", line 932, in _bootstrap_inner
+    self.run()
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/client.py", line 3718, in run
+    pubsub.get_message(ignore_subscribe_messages=True,
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/client.py", line 3617, in get_message
+    response = self.parse_response(block=False, timeout=timeout)
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/client.py", line 3503, in parse_response
+    if not block and not conn.can_read(timeout=timeout):
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/connection.py", line 734, in can_read
+    return self._parser.can_read(timeout)
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/connection.py", line 321, in can_read
+    return self._buffer and self._buffer.can_read(timeout)
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/connection.py", line 230, in can_read
+    self._read_from_socket(timeout=timeout,
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/connection.py", line 201, in _read_from_socket
+    raise ConnectionError(SERVER_CLOSED_CONNECTION_ERROR)
+redis.exceptions.ConnectionError: Connection closed by server.
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/threading.py", line 932, in _bootstrap_inner
+    self.run()
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/client.py", line 3718, in run
+    return _run_code(code, main_globals, None,
+  File "/usr/lib/python3.8/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/opt/bench/erpnext/apps/frappe/frappe/utils/bench_helper.py", line 104, in <module>
+    main()
+  File "/opt/bench/erpnext/apps/frappe/frappe/utils/bench_helper.py", line 18, in main
+    click.Group(commands=commands)(prog_name='bench')
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/click/core.py", line 829, in __call__
+    return self.main(*args, **kwargs)
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/click/core.py", line 782, in main
+    rv = self.invoke(ctx)
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/click/core.py", line 1259, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/click/core.py", line 1259, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/click/core.py", line 1066, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/click/core.py", line 610, in invoke
+    return callback(*args, **kwargs)
+  File "/opt/bench/erpnext/apps/frappe/frappe/commands/scheduler.py", line 181, in start_worker
+    start_worker(queue, quiet = quiet, rq_username=rq_username, rq_password=rq_password)
+  File "/opt/bench/erpnext/apps/frappe/frappe/utils/background_jobs.py", line 158, in start_worker
+    Worker(queues, name=get_worker_name(queue_name)).work(logging_level = logging_level)
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/rq/worker.py", line 626, in work
+    pubsub.get_message(ignore_subscribe_messages=True,
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/client.py", line 3617, in get_message
+    response = self.parse_response(block=False, timeout=timeout)
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/client.py", line 3503, in parse_response
+    if not block and not conn.can_read(timeout=timeout):
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/connection.py", line 734, in can_read
+    return self._parser.can_read(timeout)
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/connection.py", line 321, in can_read
+    return self._buffer and self._buffer.can_read(timeout)
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/connection.py", line 230, in can_read
+    self._read_from_socket(timeout=timeout,
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/connection.py", line 201, in _read_from_socket
+    raise ConnectionError(SERVER_CLOSED_CONNECTION_ERROR)
+redis.exceptions.ConnectionError: Connection closed by server.
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/threading.py", line 932, in _bootstrap_inner
+    self.run()
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/client.py", line 3718, in run
+    pubsub.get_message(ignore_subscribe_messages=True,
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/client.py", line 3617, in get_message
+    response = self.parse_response(block=False, timeout=timeout)
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/client.py", line 3503, in parse_response
+    if not block and not conn.can_read(timeout=timeout):
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/connection.py", line 734, in can_read
+    return self._parser.can_read(timeout)
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/connection.py", line 321, in can_read
+    return self._buffer and self._buffer.can_read(timeout)
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/connection.py", line 230, in can_read
+    self._read_from_socket(timeout=timeout,
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/connection.py", line 201, in _read_from_socket
+    raise ConnectionError(SERVER_CLOSED_CONNECTION_ERROR)
+redis.exceptions.ConnectionError: Connection closed by server.
+    return self.main(*args, **kwargs)
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/click/core.py", line 782, in main
+    rv = self.invoke(ctx)
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/click/core.py", line 1259, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/click/core.py", line 1259, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/click/core.py", line 1066, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/click/core.py", line 610, in invoke
+    return callback(*args, **kwargs)
+  File "/opt/bench/erpnext/apps/frappe/frappe/commands/scheduler.py", line 181, in start_worker
+    start_worker(queue, quiet = quiet, rq_username=rq_username, rq_password=rq_password)
+  File "/opt/bench/erpnext/apps/frappe/frappe/utils/background_jobs.py", line 158, in start_worker
+    Worker(queues, name=get_worker_name(queue_name)).work(logging_level = logging_level)
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/rq/worker.py", line 626, in work
+    self.register_death()
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/rq/worker.py", line 326, in register_death
+    p.execute()
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/client.py", line 4012, in execute
+    conn = self.connection_pool.get_connection('MULTI',
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/connection.py", line 1192, in get_connection
+    connection.connect()
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/connection.py", line 563, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to localhost:11000. Connection refused.
+12:00:29 Worker rq:worker:8e0f36c09e9e4f939878e5040258c8e1.tinle-VirtualBox.10831.opt-bench-erpnext:default: found an unhandled exception, quitting...
+Traceback (most recent call last):
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/connection.py", line 198, in _read_from_socket
+    data = recv(self._sock, socket_read_size)
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/_compat.py", line 72, in recv
+    return sock.recv(*args, **kwargs)
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/rq/worker.py", line 595, in work
+    self.execute_job(job, queue)
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/rq/worker.py", line 856, in execute_job
+    self.monitor_work_horse(job, queue)
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/rq/worker.py", line 786, in monitor_work_horse
+    retpid, ret_val = self.wait_for_horse()
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/rq/worker.py", line 433, in wait_for_horse
+    pid, stat = os.waitpid(self.horse_pid, 0)
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/rq/worker.py", line 461, in request_stop
+    self._shutdown()
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/rq/worker.py", line 470, in _shutdown
+    self.set_shutdown_requested_date()
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/rq/worker.py", line 330, in set_shutdown_requested_date
+    self.connection.hset(self.key, 'shutdown_requested_date', utcformat(utcnow()))
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/client.py", line 3050, in hset
+    return self.execute_command('HSET', name, *items)
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/client.py", line 901, in execute_command
+    return self.parse_response(conn, command_name, **options)
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/client.py", line 915, in parse_response
+    response = connection.read_response()
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/connection.py", line 739, in read_response
+    response = self._parser.read_response()
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/connection.py", line 324, in read_response
+    raw = self._buffer.readline()
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/connection.py", line 256, in readline
+    self._read_from_socket()
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/connection.py", line 222, in _read_from_socket
+    raise ConnectionError("Error while reading from socket: %s" %
+redis.exceptions.ConnectionError: Error while reading from socket: (104, 'Connection reset by peer')
+Traceback (most recent call last):
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/connection.py", line 559, in connect
+    sock = self._connect()
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/connection.py", line 615, in _connect
+    raise err
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/connection.py", line 603, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/runpy.py", line 194, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib/python3.8/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/opt/bench/erpnext/apps/frappe/frappe/utils/bench_helper.py", line 104, in <module>
+    main()
+  File "/opt/bench/erpnext/apps/frappe/frappe/utils/bench_helper.py", line 18, in main
+    self.register_death()
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/rq/worker.py", line 326, in register_death
+    p.execute()
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/client.py", line 4012, in execute
+    conn = self.connection_pool.get_connection('MULTI',
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/connection.py", line 1192, in get_connection
+    connection.connect()
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/connection.py", line 563, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to localhost:11000. Connection refused.
+    click.Group(commands=commands)(prog_name='bench')
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/click/core.py", line 829, in __call__
+    return self.main(*args, **kwargs)
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/click/core.py", line 782, in main
+    rv = self.invoke(ctx)
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/click/core.py", line 1259, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/click/core.py", line 1259, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/click/core.py", line 1066, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/click/core.py", line 610, in invoke
+    return callback(*args, **kwargs)
+  File "/opt/bench/erpnext/apps/frappe/frappe/commands/scheduler.py", line 181, in start_worker
+    start_worker(queue, quiet = quiet, rq_username=rq_username, rq_password=rq_password)
+  File "/opt/bench/erpnext/apps/frappe/frappe/utils/background_jobs.py", line 158, in start_worker
+    Worker(queues, name=get_worker_name(queue_name)).work(logging_level = logging_level)
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/rq/worker.py", line 626, in work
+    self.register_death()
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/rq/worker.py", line 326, in register_death
+    p.execute()
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/client.py", line 4012, in execute
+    conn = self.connection_pool.get_connection('MULTI',
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/connection.py", line 1192, in get_connection
+    connection.connect()
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/connection.py", line 563, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to localhost:11000. Connection refused.
+12:00:30 Traceback (most recent call last):
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/connection.py", line 1198, in get_connection
+    if connection.can_read():
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/connection.py", line 734, in can_read
+    return self._parser.can_read(timeout)
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/connection.py", line 321, in can_read
+    return self._buffer and self._buffer.can_read(timeout)
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/connection.py", line 230, in can_read
+    self._read_from_socket(timeout=timeout,
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/connection.py", line 201, in _read_from_socket
+    raise ConnectionError(SERVER_CLOSED_CONNECTION_ERROR)
+redis.exceptions.ConnectionError: Connection closed by server.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/connection.py", line 559, in connect
+    sock = self._connect()
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/connection.py", line 615, in _connect
+    raise err
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/connection.py", line 603, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/rq/worker.py", line 1020, in perform_job
+    self.handle_job_success(job=job,
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/rq/worker.py", line 970, in handle_job_success
+    pipeline.watch(job.dependents_key)
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/client.py", line 4041, in watch
+    return self.execute_command('WATCH', *names)
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/client.py", line 3822, in execute_command
+    return self.immediate_execute_command(*args, **kwargs)
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/client.py", line 3836, in immediate_execute_command
+    conn = self.connection_pool.get_connection(command_name,
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/connection.py", line 1202, in get_connection
+    connection.connect()
+  File "/opt/bench/erpnext/env/lib/python3.8/site-packages/redis/connection.py", line 563, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to localhost:11000. Connection refused.
+

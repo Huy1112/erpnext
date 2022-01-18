@@ -1,0 +1,177 @@
+2021-12-16 23:24:13,450 DEBUG cd /opt/bench/erpnext && /usr/local/bin/virtualenv --quiet env -p python3
+2021-12-16 23:24:14,742 DEBUG cd /opt/bench/erpnext && /opt/bench/erpnext/env/bin/python -m pip install --quiet --upgrade pip
+2021-12-16 23:24:16,940 LOG Getting frappe
+2021-12-16 23:24:16,940 DEBUG cd erpnext/apps && git clone https://github.com/frappe/frappe.git  --depth 1 --origin upstream
+2021-12-16 23:24:27,489 LOG Installing frappe
+2021-12-16 23:24:27,490 DEBUG cd /opt/bench/erpnext && /opt/bench/erpnext/env/bin/python -m pip install --quiet --upgrade -e /opt/bench/erpnext/apps/frappe 
+2021-12-16 23:25:25,205 DEBUG cd /opt/bench/erpnext/apps/frappe && yarn install
+2021-12-16 23:27:03,524 DEBUG cd erpnext && bench build
+2021-12-16 23:27:03,863 INFO /usr/local/bin/bench build
+2021-12-17 00:57:24,821 WARNING /usr/local/bin/bench init erpnext executed with exit code 1
+2021-12-17 00:59:00,779 INFO /usr/local/bin/bench new-site erp.thanhtin.com
+2021-12-17 01:04:26,882 INFO /usr/local/bin/bench get-app branch version-13 erpnext https://github.com/frappe/erpnext
+2021-12-17 01:04:27,863 LOG Getting erpnext
+2021-12-17 01:04:27,863 DEBUG cd ./apps && git clone https://github.com/frappe/erpnext.git  --depth 1 --origin upstream
+2021-12-17 01:05:01,863 LOG Installing erpnext
+2021-12-17 01:05:01,863 DEBUG cd /opt/bench/erpnext && /opt/bench/erpnext/env/bin/python -m pip install --quiet --upgrade -e /opt/bench/erpnext/apps/erpnext 
+2021-12-17 08:25:54,225 DEBUG cd /opt/bench/erpnext/apps/erpnext && yarn install
+2021-12-17 08:25:59,044 DEBUG bench build --app erpnext
+2021-12-17 08:25:59,558 INFO /usr/local/bin/bench build --app erpnext
+2021-12-17 08:29:57,125 INFO /usr/local/bin/bench --site erp.thanhtin.com install-app erpnext
+2021-12-17 08:33:30,404 INFO /usr/local/bin/bench start
+2021-12-17 08:33:33,525 INFO /usr/local/bin/bench serve --port 8000
+2021-12-17 08:33:33,853 INFO /usr/local/bin/bench worker --queue long
+2021-12-17 08:33:33,889 INFO /usr/local/bin/bench watch
+2021-12-17 08:33:33,910 INFO /usr/local/bin/bench schedule
+2021-12-17 08:33:33,965 INFO /usr/local/bin/bench worker --queue short
+2021-12-17 08:33:33,980 INFO /usr/local/bin/bench worker --queue default
+2022-01-13 09:31:44,020 INFO /usr/local/bin/bench new-app library.test
+2022-01-13 09:31:46,283 LOG creating new app library.test
+2022-01-13 09:31:57,146 WARNING /usr/local/bin/bench new-app library.test executed with exit code 1
+2022-01-13 09:32:33,966 INFO /usr/local/bin/bench new-app library_management
+2022-01-13 09:32:34,807 LOG creating new app library_management
+2022-01-13 09:33:04,852 LOG Installing library_management
+2022-01-13 09:33:04,857 DEBUG cd /opt/bench/erpnext && /opt/bench/erpnext/env/bin/python -m pip install --quiet --upgrade -e /opt/bench/erpnext/apps/library_management 
+2022-01-13 09:33:07,854 DEBUG bench build --app library_management
+2022-01-13 09:33:08,078 INFO /usr/local/bin/bench build --app library_management
+2022-01-13 09:33:58,127 INFO /usr/local/bin/bench new-site library.test
+2022-01-13 09:39:04,792 INFO /usr/local/bin/bench --site library.test add-to-hosts
+2022-01-13 09:39:46,238 INFO /usr/local/bin/bench start
+2022-01-13 09:39:48,914 INFO /usr/local/bin/bench serve --port 8000
+2022-01-13 09:39:48,998 INFO /usr/local/bin/bench schedule
+2022-01-13 09:39:49,090 INFO /usr/local/bin/bench worker --queue short
+2022-01-13 09:39:49,103 INFO /usr/local/bin/bench worker --queue long
+2022-01-13 09:39:49,129 INFO /usr/local/bin/bench watch
+2022-01-13 09:39:49,192 INFO /usr/local/bin/bench worker --queue default
+2022-01-13 10:19:47,624 INFO /usr/local/bin/bench set-config -g developer-mode true
+2022-01-13 10:53:10,231 INFO /usr/local/bin/bench --site library.test mariadb
+2022-01-13 10:58:53,733 INFO /usr/local/bin/bench --site library.test mariadb
+2022-01-13 11:41:48,057 INFO /usr/local/bin/bench set-config -g developer_mode true
+2022-01-13 11:42:11,752 INFO /usr/local/bin/bench set-config -g developer_mode true
+2022-01-13 11:45:05,636 INFO /usr/local/bin/bench set-config -g developer_mode true
+2022-01-13 11:45:23,330 INFO /usr/local/bin/bench set-config -g developer_mode true
+2022-01-13 11:48:34,721 INFO /usr/local/bin/bench restart
+2022-01-13 11:53:22,571 INFO /usr/local/bin/bench startr
+2022-01-13 11:53:25,245 WARNING /usr/local/bin/bench startr executed with exit code 2
+2022-01-13 11:53:27,644 INFO /usr/local/bin/bench start
+2022-01-13 11:53:30,521 INFO /usr/local/bin/bench watch
+2022-01-13 11:53:30,587 INFO /usr/local/bin/bench schedule
+2022-01-13 11:53:30,592 INFO /usr/local/bin/bench serve --port 8000
+2022-01-13 11:53:30,657 INFO /usr/local/bin/bench worker --queue default
+2022-01-13 11:53:30,740 INFO /usr/local/bin/bench worker --queue long
+2022-01-13 11:53:30,753 INFO /usr/local/bin/bench worker --queue short
+2022-01-13 13:15:15,739 INFO /usr/local/bin/bench start
+2022-01-13 13:15:20,210 INFO /usr/local/bin/bench serve --port 8000
+2022-01-13 13:15:20,258 INFO /usr/local/bin/bench schedule
+2022-01-13 13:15:20,315 INFO /usr/local/bin/bench watch
+2022-01-13 13:15:20,413 INFO /usr/local/bin/bench worker --queue long
+2022-01-13 13:15:20,523 INFO /usr/local/bin/bench worker --queue short
+2022-01-13 13:15:20,565 INFO /usr/local/bin/bench worker --queue default
+2022-01-13 14:53:43,328 INFO /usr/local/bin/bench --site library.test mariadb
+2022-01-13 14:56:45,475 INFO /usr/local/bin/bench --site library.test mariadb
+2022-01-13 15:00:52,710 INFO /usr/local/bin/bench --site library.test mariadb
+2022-01-13 15:37:51,068 INFO /usr/local/bin/bench --site library.test set-config server_script_enabled true
+2022-01-13 16:54:48,570 INFO /usr/local/bin/bench start
+2022-01-13 16:54:53,478 INFO /usr/local/bin/bench serve --port 8000
+2022-01-13 16:54:53,530 INFO /usr/local/bin/bench watch
+2022-01-13 16:54:53,628 INFO /usr/local/bin/bench worker --queue short
+2022-01-13 16:54:53,619 INFO /usr/local/bin/bench schedule
+2022-01-13 16:54:53,681 INFO /usr/local/bin/bench worker --queue long
+2022-01-13 16:54:53,686 INFO /usr/local/bin/bench worker --queue default
+2022-01-14 08:13:16,553 INFO /usr/local/bin/bench start
+2022-01-14 08:13:27,004 INFO /usr/local/bin/bench schedule
+2022-01-14 08:13:27,012 INFO /usr/local/bin/bench serve --port 8000
+2022-01-14 08:13:27,092 INFO /usr/local/bin/bench worker --queue short
+2022-01-14 08:13:27,130 INFO /usr/local/bin/bench watch
+2022-01-14 08:13:27,190 INFO /usr/local/bin/bench worker --queue long
+2022-01-14 08:13:27,163 INFO /usr/local/bin/bench worker --queue default
+2022-01-14 09:33:52,745 INFO /usr/local/bin/bench --site library.test mariadb
+2022-01-14 09:50:51,258 INFO /usr/local/bin/bench --site library.test mariadb
+2022-01-14 09:53:40,805 INFO /usr/local/bin/bench --site library.test mariadb
+2022-01-14 13:17:17,793 INFO /usr/local/bin/bench start
+2022-01-14 13:17:22,416 INFO /usr/local/bin/bench serve --port 8000
+2022-01-14 13:17:22,516 INFO /usr/local/bin/bench watch
+2022-01-14 13:17:22,610 INFO /usr/local/bin/bench schedule
+2022-01-14 13:17:22,628 INFO /usr/local/bin/bench worker --queue short
+2022-01-14 13:17:22,650 INFO /usr/local/bin/bench worker --queue long
+2022-01-14 13:17:22,708 INFO /usr/local/bin/bench worker --queue default
+2022-01-14 13:54:52,018 INFO /usr/local/bin/bench --site library.test mariadb
+2022-01-14 14:47:34,081 INFO /usr/local/bin/bench start
+2022-01-14 14:47:39,103 INFO /usr/local/bin/bench serve --port 8000
+2022-01-14 14:47:39,228 INFO /usr/local/bin/bench schedule
+2022-01-14 14:47:39,234 INFO /usr/local/bin/bench watch
+2022-01-14 14:47:39,404 INFO /usr/local/bin/bench worker --queue long
+2022-01-14 14:47:39,418 INFO /usr/local/bin/bench worker --queue default
+2022-01-14 14:47:39,434 INFO /usr/local/bin/bench worker --queue short
+2022-01-14 14:56:15,868 INFO /usr/local/bin/bench start
+2022-01-14 14:58:30,133 INFO /usr/local/bin/bench start
+2022-01-14 14:58:37,911 INFO /usr/local/bin/bench serve --port 8000
+2022-01-14 14:58:37,943 INFO /usr/local/bin/bench watch
+2022-01-14 14:58:37,988 INFO /usr/local/bin/bench schedule
+2022-01-14 14:58:38,128 INFO /usr/local/bin/bench worker --queue short
+2022-01-14 14:58:38,202 INFO /usr/local/bin/bench worker --queue long
+2022-01-14 14:58:38,267 INFO /usr/local/bin/bench worker --queue default
+                                                                                                                  2022-01-14 16:24:39,313 INFO /usr/local/bin/bench start
+2022-01-14 16:24:44,542 INFO /usr/local/bin/bench serve --port 8000
+2022-01-14 16:24:44,578 INFO /usr/local/bin/bench watch
+2022-01-14 16:24:44,718 INFO /usr/local/bin/bench worker --queue long
+2022-01-14 16:24:44,755 INFO /usr/local/bin/bench schedule
+2022-01-14 16:24:44,926 INFO /usr/local/bin/bench worker --queue short
+2022-01-14 16:24:44,934 INFO /usr/local/bin/bench worker --queue default
+2022-01-14 16:37:06,549 INFO /usr/local/bin/bench --site library.test mariadb
+2022-01-14 16:43:04,340 INFO /usr/local/bin/bench --site library.test mariadb
+2022-01-17 08:22:35,683 INFO /usr/local/bin/bench start
+2022-01-17 08:22:41,199 INFO /usr/local/bin/bench serve --port 8000
+2022-01-17 08:22:41,253 INFO /usr/local/bin/bench watch
+2022-01-17 08:22:41,269 INFO /usr/local/bin/bench schedule
+2022-01-17 08:22:41,310 INFO /usr/local/bin/bench worker --queue long
+2022-01-17 08:22:41,318 INFO /usr/local/bin/bench worker --queue short
+2022-01-17 08:22:41,353 INFO /usr/local/bin/bench worker --queue default
+2022-01-17 11:24:20,009 INFO /usr/local/bin/bench --site library.test mariadb
+2022-01-17 11:25:59,890 INFO /usr/local/bin/bench --site library.test mariadb
+2022-01-17 11:29:27,063 INFO /usr/local/bin/bench --site library.test mariadb
+2022-01-17 11:34:28,014 INFO /usr/local/bin/bench start
+2022-01-17 11:34:34,325 INFO /usr/local/bin/bench serve --port 8000
+2022-01-17 11:34:34,385 INFO /usr/local/bin/bench watch
+2022-01-17 11:34:34,514 INFO /usr/local/bin/bench worker --queue short
+2022-01-17 11:34:34,607 INFO /usr/local/bin/bench schedule
+2022-01-17 11:34:34,684 INFO /usr/local/bin/bench worker --queue default
+2022-01-17 11:34:34,711 INFO /usr/local/bin/bench worker --queue long
+2022-01-17 13:14:44,265 INFO /usr/local/bin/bench start
+2022-01-17 13:14:49,116 INFO /usr/local/bin/bench serve --port 8000
+2022-01-17 13:14:49,145 INFO /usr/local/bin/bench schedule
+2022-01-17 13:14:49,161 INFO /usr/local/bin/bench watch
+2022-01-17 13:14:49,240 INFO /usr/local/bin/bench worker --queue short
+2022-01-17 13:14:49,295 INFO /usr/local/bin/bench worker --queue long
+2022-01-17 13:14:49,414 INFO /usr/local/bin/bench worker --queue default
+2022-01-17 13:59:52,317 INFO /usr/local/bin/bench start
+2022-01-17 13:59:57,026 INFO /usr/local/bin/bench serve --port 8000
+2022-01-17 13:59:57,265 INFO /usr/local/bin/bench schedule
+2022-01-17 13:59:57,334 INFO /usr/local/bin/bench watch
+2022-01-17 13:59:57,368 INFO /usr/local/bin/bench worker --queue short
+2022-01-17 13:59:57,390 INFO /usr/local/bin/bench worker --queue long
+2022-01-17 13:59:57,408 INFO /usr/local/bin/bench worker --queue default
+2022-01-18 09:35:46,517 INFO /usr/local/bin/bench -- site library.test build-docs library_management --target library_management
+2022-01-18 09:35:49,685 WARNING /usr/local/bin/bench -- site library.test build-docs library_management --target library_management executed with exit code 2
+2022-01-18 09:36:14,133 INFO /usr/local/bin/bench --site library.test build-docs library_management --target library_management
+2022-01-18 11:09:26,644 INFO /usr/local/bin/bench start
+2022-01-18 11:09:30,158 INFO /usr/local/bin/bench serve --port 8000
+2022-01-18 11:09:30,237 INFO /usr/local/bin/bench schedule
+2022-01-18 11:09:30,246 INFO /usr/local/bin/bench watch
+2022-01-18 11:09:30,341 INFO /usr/local/bin/bench worker --queue short
+2022-01-18 11:09:30,343 INFO /usr/local/bin/bench worker --queue default
+2022-01-18 11:09:30,460 INFO /usr/local/bin/bench worker --queue long
+2022-01-18 11:53:55,859 INFO /usr/local/bin/bench start
+2022-01-18 11:54:01,751 INFO /usr/local/bin/bench watch
+2022-01-18 11:54:01,757 INFO /usr/local/bin/bench worker --queue short
+2022-01-18 11:54:01,769 INFO /usr/local/bin/bench serve --port 8000
+2022-01-18 11:54:01,772 INFO /usr/local/bin/bench schedule
+2022-01-18 11:54:01,782 INFO /usr/local/bin/bench worker --queue long
+2022-01-18 11:54:01,827 INFO /usr/local/bin/bench worker --queue default
+2022-01-18 12:00:32,717 INFO /usr/local/bin/bench start
+2022-01-18 12:00:37,378 INFO /usr/local/bin/bench serve --port 8000
+2022-01-18 12:00:37,387 INFO /usr/local/bin/bench watch
+2022-01-18 12:00:37,375 INFO /usr/local/bin/bench schedule
+2022-01-18 12:00:37,519 INFO /usr/local/bin/bench worker --queue long
+2022-01-18 12:00:37,569 INFO /usr/local/bin/bench worker --queue short
+2022-01-18 12:00:37,587 INFO /usr/local/bin/bench worker --queue default
